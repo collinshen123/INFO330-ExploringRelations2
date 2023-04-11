@@ -1,5 +1,5 @@
 -- What was the most purchased track of 2013?
-select tracks.Name, sum(invoice_items.Quantity) as total_purchases
+select tracks.TrackId, tracks.Name, sum(invoice_items.Quantity) as total_purchases, invoices.InvoiceDate
 from tracks 
 join invoice_items on invoice_items.TrackId = tracks.TrackId
 join invoices on invoice_items.InvoiceId = invoices.InvoiceId

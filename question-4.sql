@@ -1,5 +1,5 @@
 -- Which sales agent made the most in sales in 2010?
-select employees.FirstName, employees.LastName, sum(invoice_items.Quantity) as ItemsSold
+select employees.FirstName, employees.LastName, sum(invoice_items.Quantity) as ItemsSold, invoices.InvoiceDate
 from employees 
 join customers on employees.EmployeeId= customers.SupportRepId 
 join invoices on  customers.CustomerId = invoices.CustomerId 
