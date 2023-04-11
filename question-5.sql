@@ -6,4 +6,4 @@ join invoices on invoice_items.InvoiceId = invoices.InvoiceId
 where invoices.InvoiceDate like "2013%"
 group by tracks.Name
 order by total_purchases desc
-limit 50
+limit 50;

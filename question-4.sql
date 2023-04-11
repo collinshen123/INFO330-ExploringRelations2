@@ -5,4 +5,4 @@ join customers on employees.EmployeeId= customers.SupportRepId
 join invoices on  customers.CustomerId = invoices.CustomerId 
 join invoice_items on invoices.InvoiceId = invoice_items.InvoiceId
 where invoices.InvoiceDate like "2010%"
-group by employees.EmployeeId
+group by employees.EmployeeId;
